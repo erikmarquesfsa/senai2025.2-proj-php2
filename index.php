@@ -11,7 +11,7 @@
 <body>
     <h1>Cadastre o produto</h1>
     <div class="container">
-        <form class="row g-2">
+        <form class="row g-2" action="scripts/salvar.php" method="post">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control" name="n_produto" placeholder="Nome do Produto" required>
@@ -40,7 +40,7 @@
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Salvar Produto</button>
             </div>
 
         </form>
