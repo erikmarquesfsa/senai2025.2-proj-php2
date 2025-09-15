@@ -10,34 +10,39 @@
 
 <body>
     <h1>Cadastre o produto</h1>
-    <form class="row g-3">
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nome do Produto</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Categoria</label>
-            <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-            </select>
-        </div>
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">QTDE Estoque</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-            <label for="inputAddress2" class="form-label">Valor</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="col-md-6">
-            <label for="inputCity" class="form-label">Validade</label>
-            <input type="date" class="form-control" id="inputCity">
-        </div>
-        
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
+    <div class="container">
+        <form class="row g-2">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" name="n_produto" placeholder="Nome do Produto" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Categoria</label>
+                <select name="categoria" class="form-select">
+                    <option selected>Selecione</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Frios">Frios</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Hortifrut">Hortifrut</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">QTDE Estoque</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Valor</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Validade</label>
+                <input type="date" class="form-control" id="inputCity">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+    </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
