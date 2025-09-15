@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Categoria</label>
-                <select name="categoria" class="form-select">
+                <select name="categoria" class="form-select" required>
                     <option selected>Selecione</option>
                     <option value="Alimentação">Alimentação</option>
                     <option value="Frios">Frios</option>
@@ -26,24 +26,25 @@
                     <option value="Hortifrut">Hortifrut</option>
                 </select>
             </div>
-            <div class="col-12">
+            <div class="col-6">
                 <label for="inputAddress" class="form-label">QTDE Estoque</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input type="text" class="form-control" placeholder="Estoque" name="qtde_estoque" required>
             </div>
-            <div class="col-12">
+            <div class="col-6">
                 <label for="inputAddress2" class="form-label">Valor</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                <input type="text" class="form-control"  placeholder="Informe o valor" name="valor">
             </div>
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Validade</label>
-                <input type="date" class="form-control" id="inputCity">
+                <input type="date" class="form-control" name="validade">
             </div>
 
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
+
+        </form>
     </div>
-    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
