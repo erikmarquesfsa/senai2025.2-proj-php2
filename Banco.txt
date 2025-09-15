@@ -1,0 +1,10 @@
+create database mercadinho;
+
+create table produto(
+id int auto_increment primary key,
+nome_produto varchar(100),
+categoria varchar(50),
+qtde_estoque float,
+valor decimal,
+validade date
+);
