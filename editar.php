@@ -1,4 +1,7 @@
-<?php include "scripts/functions.php"; ?>
+<?php 
+include "scripts/functions.php"; 
+$valores = editarProduto($_GET['id']);
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -13,14 +16,15 @@
     <h1>Edite o produto</h1>
     <div class="container">
         <form class="row g-2" action="scripts/editar.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $_GET['id'] ;?>">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" value="" name="n_produto" placeholder="Nome do Produto" required>
+                <input type="text" class="form-control" value="<?php echo $valores[0]['nome_produto'] ;//as opções do segundo array podem ser os nomes das colunas ?>" name="n_produto" placeholder="Nome do Produto" required>
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Categoria</label>
                 <select name="categoria" class="form-select" required>
-                    <option selected>Selecione</option>
+                    <option value="<?php echo $valores[0]['categoria'] ;?>"><?php echo $valores[0]['categoria'] ;?></option>
                     <option value="Alimentação">Alimentação</option>
                     <option value="Frios">Frios</option>
                     <option value="Bebidas">Bebidas</option>
@@ -29,15 +33,15 @@
             </div>
             <div class="col-6">
                 <label for="inputAddress" class="form-label">QTDE Estoque</label>
-                <input type="text" class="form-control" placeholder="Estoque" name="qtde_estoque" required>
+                <input type="text" class="form-control" value="<?php echo $valores[0]['qtde_estoque'] ;?>" placeholder="Estoque" name="qtde_estoque" required>
             </div>
             <div class="col-6">
                 <label for="inputAddress2" class="form-label">Valor</label>
-                <input type="text" class="form-control"  placeholder="Informe o valor" name="valor">
+                <input type="text" class="form-control" value="<?php echo $valores[0]['valor'] ;?>"  placeholder="Informe o valor" name="valor">
             </div>
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Validade</label>
-                <input type="date" class="form-control" name="validade">
+                <input type="date" value= "<?php echo $valores[0]['validade'] ;?>" class="form-control" name="validade">
             </div>
 
             <div class="col-12">
