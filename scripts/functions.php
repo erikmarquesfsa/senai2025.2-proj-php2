@@ -9,4 +9,14 @@ function verificarProduto($produto){
     return $total;
 }
 
+function editarProduto($id){
+    include "config.php";
+    $sql = "SELECT * FROM produto WHERE id = '$id'";
+    $query = $mysqli->query($sql);
+    $dados = $query->fetch_array();
+
+    return array($dados);
+
+}
+
 ?>
