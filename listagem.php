@@ -23,6 +23,7 @@
                 <th style="text-align: center;">Valor</th>
                 <th style="text-align: center;">Validade</th>
                 <th style="text-align: center;">#</th>
+                <th style="text-align: center;">#</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +45,9 @@
                 <td style="text-align: center;">
                     <a href="editar.php?id=<?php echo $dados[0];?>" class="btn btn-primary">Editar</a>
                 </td>
+                <td style="text-align: center;">
+                    <a href="scripts/deletar.php?id=<?php echo $dados[0];?>" class="btn btn-danger">Deletar</a>
+                </td>
             </tr>           
             <?php } ?>
         </tbody>
@@ -55,6 +59,7 @@
                 <th style="text-align: center;">QTDE em Estoque</th>
                 <th style="text-align: center;">Valor</th>
                 <th style="text-align: center;">Validade</th>
+                <th style="text-align: center;">#</th>
                 <th style="text-align: center;">#</th>
             </tr>
         </tfoot>
