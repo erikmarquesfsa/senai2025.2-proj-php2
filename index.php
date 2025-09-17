@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <h1>Cadastre o produto</h1>
+    <?php include "menu.php"; ?>    
     <div class="container">
+        <h1>Cadastre o produto</h1>
         <form class="row g-2" action="scripts/salvar.php" method="post">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Nome do Produto</label>

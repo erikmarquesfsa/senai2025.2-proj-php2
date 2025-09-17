@@ -13,8 +13,9 @@ $valores = editarProduto($_GET['id']);
 </head>
 
 <body>
-    <h1>Edite o produto</h1>
+    <?php include "menu.php"; ?>     
     <div class="container">
+        <h1>Edite o produto</h1>
         <form class="row g-2" action="scripts/editar.php" method="post">
             <input type="hidden" name="id" value="<?php echo $_GET['id'] ;?>">
             <div class="col-md-6">
@@ -45,7 +46,7 @@ $valores = editarProduto($_GET['id']);
             </div>
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Salvar Produto</button>
+                <button type="submit" class="btn btn-danger">Editar Produto</button>
             </div>
 
         </form>
