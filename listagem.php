@@ -16,32 +16,46 @@
         <table id="example" class="display">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nome do Produto</th>
-                <th>Categoria</th>
-                <th>QTDE em Estoque</th>
-                <th>Valor</th>
-                <th>Validade</th>
+                <th style="text-align: center;">Id</th>
+                <th style="text-align: center;">Nome do Produto</th>
+                <th style="text-align: center;">Categoria</th>
+                <th style="text-align: center;">QTDE em Estoque</th>
+                <th style="text-align: center;">Valor</th>
+                <th style="text-align: center;">Validade</th>
+                <th style="text-align: center;">#</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
+            <?php
+                include "scripts/config.php"; 
+                $sql = "SELECT * FROM produto";
+                $query = $mysqli->query($sql);
+                while($dados = $query->fetch_array()){
+            ?>
+            <tr style="text-align: center;">
+                <td style="text-align: center;"><?php echo $dados[0];?></td>
+                <td style="text-align: center;"><?php echo $dados[1];?></td>
+                <td style="text-align: center;"><?php echo $dados[2];?></td>
+                <td style="text-align: center;"><?php echo $dados[3];?></td>
+                <td style="text-align: center;"><?php echo $dados[4];?></td>
+                <td style="text-align: center;">
+                    <?php echo date('d/m/y', strtotime($dados[5]));?>
+                </td>
+                <td style="text-align: center;">
+                    <a href="editar.php?id=<?php echo $dados[0];?>" class="btn btn-primary">Editar</a>
+                </td>
             </tr>           
+            <?php } ?>
         </tbody>
         <tfoot>
             <tr>
-                <th>Id</th>
-                <th>Nome do Produto</th>
-                <th>Categoria</th>
-                <th>QTDE em Estoque</th>
-                <th>Valor</th>
-                <th>Validade</th>
+                <th style="text-align: center;">Id</th>
+                <th style="text-align: center;">Nome do Produto</th>
+                <th style="text-align: center;">Categoria</th>
+                <th style="text-align: center;">QTDE em Estoque</th>
+                <th style="text-align: center;">Valor</th>
+                <th style="text-align: center;">Validade</th>
+                <th style="text-align: center;">#</th>
             </tr>
         </tfoot>
     </table>         
