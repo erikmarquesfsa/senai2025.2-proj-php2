@@ -8,7 +8,7 @@ $sql = "SELECT * FROM produto WHERE id = '$id_produto'";
 $query = $mysqli->query($sql);
 $dados = $query->fetch_array();
 
-if($qtde==0 and $qtde>=$dados['qtde_estoque']){
+if($qtde==0 OR $qtde<=$dados['qtde_estoque']){
 
     echo "Não temos estoque suficiente do produto"; 
 }else{
